@@ -4,7 +4,7 @@ kind: Pod
 
 metadata:
   name: voting-app-prod
-  lables:
+  labels:
       name: voting-app-prod
       app: demo-voting-app
 
