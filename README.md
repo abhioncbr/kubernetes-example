@@ -1,17 +1,15 @@
 # kubernetes-example
-Repo for Kubernetes examples. 
+[<img src="https://github.com/cncf/artwork/blob/master/projects/kubernetes/horizontal/black/kubernetes-horizontal-black.png" alt="Kubernetes" width="1000"/>](https://kubernetes.io/)
+Repo for Kubernetes examples.
 
-# Deployments
-- [nginx](example-deployments/example-nginx.yaml): create a deployment with one pod and a service object.
-  ```bash
-    kubectl create -f example-nginx.yaml            # create a deployment & service object on K8s cluster.
-    kubectl get pods                                # to get the created pod.    
-    kubectl get service                             # to get the created service.
-    kubectl get all                                 # to get all the created objects.
-    kubectl port-forward pod/<pod-name> 8080:80     # to access the created pod app.
-    curl -k http://localhost:8080/                  # to access nginx default page.
-  ```  
-# Published Posts
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+
+## Kubernetes basic objects examples
+- [example-deployments](k8s-objects-examples/example-deployments/README.md): consist different types of deployments examples
+- [example-micorservice-apps](k8s-objects-examples/example-microservice-apps/README.md): consist simple microservice apps
+
+## Published Posts
 - Pod Eviction
   - Part 1: [Please don’t evict my pod; QoS Class](https://itnext.io/please-dont-evict-my-pod-part-1-399640df3ddb?source=friends_link&sk=7fbe0c04353c59e17ba40a0bd63341c0)
   - Part 2: [Please don’t evict my pod; eviction policy](https://itnext.io/please-dont-evict-my-pod-eviction-policy-ef4c5380f5fd?source=friends_link&sk=0b60541f93cbf36c45a7e5921e852174)
