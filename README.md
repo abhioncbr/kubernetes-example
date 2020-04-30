@@ -1,6 +1,9 @@
 # kubernetes-example
-[<img src="https://github.com/cncf/artwork/blob/master/projects/kubernetes/horizontal/black/kubernetes-horizontal-black.png" alt="Kubernetes" width="500"/>](https://kubernetes.io/)
+[<img src="https://github.com/cncf/artwork/blob/master/projects/kubernetes/horizontal/black/kubernetes-horizontal-black.png" alt="Kubernetes" width="1000"/>](https://kubernetes.io/)
 Repo for Kubernetes examples.
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 
 ## Kubernetes basic objects examples
 - [example-deployments](k8s-objects-examples/example-deployments/README.md): consist different types of deployments examples
