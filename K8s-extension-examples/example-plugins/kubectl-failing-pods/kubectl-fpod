@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# printing version of the plugin
+if [[ "$1" == "version" ]]
+then
+    echo "kubectl fpods version 0.1.0"
+    exit 0
+fi
+
+kubectl get pods --all-namespaces --field-selector=status.phase!=Running
