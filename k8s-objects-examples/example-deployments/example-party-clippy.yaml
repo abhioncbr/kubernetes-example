@@ -47,7 +47,7 @@ metadata:
     kubernetes.io/ingress.class: addon-http-application-routing
 spec:
   rules:
-  - host: party-clippy.b57565928af64bcd8a8b.eastus.aksapp.io
+  - host: party-clippy.32d7aca3101b4a8abc47.eastus.aksapp.io
     http:
       paths:
       - backend:

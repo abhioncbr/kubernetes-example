@@ -1,0 +1,34 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  namespace: istio-system
+  name: demo-istiocontrolplane
+spec:
+  profile: demo
+  components:
+    egressGateways:
+      - name: istio-egressgateway
+        enabled: true
+    ingressGateways:
+      - name: istio-ingressgateway
+        enabled: true
+        k8s:
+          serviceAnnotations:
+            service.beta.kubernetes.io/azure-load-balancer-internal: "true"         
+    cni:
+      enabled: true
+      namespace: kube-system
+  values:
+    cni:
+      excludeNamespaces:
+        - istio-system
+        - kube-system
+      logLevel: info 
+    gateways:
+      istio-egressgateway:
+        runAsRoot: false
+        env:
+          # Needed to route traffic via egress gateway if desired.
+          ISTIO_META_REQUESTED_NETWORK_VIEW: "external"
+      istio-ingressgateway:
+        runAsRoot: false    
