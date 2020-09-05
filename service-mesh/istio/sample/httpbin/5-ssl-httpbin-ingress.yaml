@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ssl-httpbin-ingress
+  namespace: istio-system
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+spec:
+  rules:
+  - host: ssl-httpbin-ingress.a43827f515a9495db0f7.eastus.aksapp.io
+    http:
+      paths:
+      - backend:
+          serviceName: istio-ingressgateway
+          servicePort: 443
+        path: /
