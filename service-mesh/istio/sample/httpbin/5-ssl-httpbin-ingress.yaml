@@ -5,13 +5,14 @@ metadata:
   namespace: istio-system
   annotations:
     kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   tls:
   - hosts:
-    - ssl-httpbin.eastus.cloudapp.azure.com
+    - ssl-exmple.kind-clstr.com
   rules:
-  - host: ssl-httpbin.eastus.cloudapp.azure.com
+  - host: ssl-exmple.kind-clstr.com
     http:
       paths:
       - backend:
