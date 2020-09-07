@@ -12,9 +12,9 @@ spec:
       protocol: HTTPS
     tls:
       mode: SIMPLE
-      credentialName: httpbin-credential # must be the same as secret
+      credentialName: ssl-httpbin-credential # must be the same as secret
     hosts:
-    - httpbin.example.com
+    - ssl-httpbin.eastus.cloudapp.azure.com
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -22,7 +22,7 @@ metadata:
   name: ssl-httpbin-vs
 spec:
   hosts:
-  - "httpbin.example.com"
+  - "ssl-httpbin.eastus.cloudapp.azure.com"
   gateways:
   - ssl-httpbin-gw
   http:

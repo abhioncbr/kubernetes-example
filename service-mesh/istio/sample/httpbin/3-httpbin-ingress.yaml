@@ -4,10 +4,11 @@ metadata:
   name: httpbin-ingress
   namespace: istio-system
   annotations:
-    kubernetes.io/ingress.class: addon-http-application-routing
+    kubernetes.io/ingress.class: nginx
+    
 spec:
   rules:
-  - host: httpbin-ingress.a43827f515a9495db0f7.eastus.aksapp.io
+  - host: httpbin.eastus.cloudapp.azure.com
     http:
       paths:
       - backend:
